@@ -14,9 +14,10 @@ defmodule ShopifyDemo.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: ShopifyDemo.PubSub},
       # Start the Endpoint (http/https)
-      ShopifyDemoWeb.Endpoint
+      ShopifyDemoWeb.Endpoint,
       # Start a worker by calling: ShopifyDemo.Worker.start_link(arg)
       # {ShopifyDemo.Worker, arg}
+      {Oban, oban_config()}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
@@ -30,5 +31,9 @@ defmodule ShopifyDemo.Application do
   def config_change(changed, _new, removed) do
     ShopifyDemoWeb.Endpoint.config_change(changed, removed)
     :ok
+  end
+
+  defp oban_config do
+    Application.fetch_env!(:shopify_demo, Oban)
   end
 end
