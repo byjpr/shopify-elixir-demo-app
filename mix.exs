@@ -44,7 +44,11 @@ defmodule ShopifyDemo.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+
+      # Auth and API
+      {:oauth2, "~> 2.0.0"},
+      {:shopify_graphql, "~> 2.0.0-rc.4"}
     ]
   end
 
