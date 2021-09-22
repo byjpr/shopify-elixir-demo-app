@@ -26,6 +26,13 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Configure your shopify app
+config :shopify_demo, :shopify_conf,
+  client_id: "INSERT_DEV_CLIENT_ID", # This comes from your Shopify Partner App page
+  client_secret: "INSERT_DEV_CLIENT_SECRET", # This comes from your Shopify Partner App page
+  redirect_uri: "https://example.com/return", # This should be the same as the one you created in the Partner page
+  base_params: "read_products, write_products" # The minimum needed
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
