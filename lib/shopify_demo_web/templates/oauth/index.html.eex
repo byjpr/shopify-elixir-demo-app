@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>🦉 &raquo; Auth</title>
+	<style>html,body{padding:0;margin:0;font-size:10px}body{font-family:-apple-system,BlinkMacSystemFont,San Francisco,Segoe UI,Roboto,Helvetica Neue,sans-serif;background-color:#f4f6f8;text-transform:initial;letter-spacing:initial}h1{font-size:2.8rem;line-height:3.2rem;margin-bottom:10px;font-weight:500}.subhead{font-size:2rem;line-height:2.8rem;margin-bottom:2rem;color:#637381;font-weight:300}input{width:100%;height:44px;padding:10px;padding-right:127px;border:2px solid #6f7bcb;color:#000;background-color:#fff;box-sizing:border-box;border-radius:4px;font-size:1.4rem;margin-bottom:10px}button{color:#fff;background-color:#3793cb;width:100%;height:44px;padding:10px 20px 10px 20px;box-sizing:border-box;border:none;text-shadow:0 1px 0 #3188bc;font-size:1.4rem;cursor:pointer;border-radius:4px;background:-webkit-gradient(linear,left top,left bottom,from(#6371c7),to(#5563c1));background:linear-gradient(to bottom,#6371c7,#5563c1);border-color:#3f4eae;-webkit-box-shadow:inset 0 1px 0 0 #6f7bcb;box-shadow:inset 0 1px 0 0 #6f7bcb}button:hover{background-color:#479CCf}form{display:block}.container{text-align:center;margin-top:100px;padding:20px}.container__form{max-width:340px;margin:auto;position:relative}.container__form__myshopify{position:absolute;right:10px;top:13px;pointer-events:none;font-size:1.4rem}footer{margin-top:5rem}footer a{text-decoration:none;color:#4A4A4A}</style>
+</head>
+<body>
+	<main class="container" role="main">
+		<header>
+			<h1>🧞</h1>
+			<p class="subhead">
+				<label for="shop">Please enter the myshopify domain of your store</label>
+			</p>
+		</header>
+
+		<div class="container__form">
+			<form method="GET" action="/auth/authorise">
+				<input type="text" name="shop" id="shop" placeholder="deathwishcoffee" />
+				<span class="container__form__myshopify">.myshopify.com</span>
+				<button type="submit">Install</button>
+			</form>
+		</div>
+	</main>
+</body>
+</html>

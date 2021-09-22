@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Setting up your space...</title>
+
+	<style>.subhead,h1{font-weight:300}.f,.h{-webkit-transition:all .6s cubic-bezier(.785,.135,.15,.86)}.e,.h{left:0}.e,.f,.h{overflow:hidden}*{box-sizing:border-box}body,html{padding:0;margin:0}body{font-family:ProximaNovaLight,"Helvetica Neue",Helvetica,Arial,sans-serif;background-color:#f2f7fa}h1{font-size:40px;margin-bottom:10px}.subhead{font-size:17px;line-height:32px;color:#969A9C}button,input{height:50px;box-sizing:border-box;font-size:18px}input{width:300px;padding:10px;border:1px solid #479CCf;color:#575757;background-color:#fff;border-radius:4px 0 0 4px;float:left}button{color:#fff;background-color:#3793cb;width:100px;padding:10px 20px;border:none;text-shadow:0 1px 0 #3188bc;cursor:pointer;border-radius:0 4px 4px 0;float:right}button:hover{background-color:#479CCf}form{display:block}.container{text-align:center;margin-top:100px;padding:20px}.container__form{width:400px;margin:auto}.p{position:absolute}.f,.h{top:0;bottom:0;width:239px;border-right:1px solid #dfe3e8;background-color:#f2f7fa;padding:0 .8rem 0 1.6rem}.e,.f{background-color:#dfe3e8}.h{top:0;padding-top:50px;transition:all .6s cubic-bezier(.785,.135,.15,.86);-webkit-animation:slideInLeft 1s infinite;-moz-animation:slideInLeft 1s infinite;-o-animation:slideInLeft 1s infinite;animation:slideInLeft 1s infinite;animation-iteration-count:1}.f{border-right-color:#d0d0d0;transition:all .6s cubic-bezier(.785,.135,.15,.86);-webkit-animation:slideInLeft 1s infinite;-moz-animation:slideInLeft 1s infinite;-o-animation:slideInLeft 1s infinite;animation:slideInLeft 1s infinite;animation-iteration-count:1}.g{width:140px;height:29px;top:50%;margin-top:-15px}.e{width:100%;height:50px;border-bottom:1px solid #dfe3e8;top:0;-webkit-transition:all .6s cubic-bezier(.785,.135,.15,.86);transition:all .6s cubic-bezier(.785,.135,.15,.86);-webkit-animation:slideInTop 1s infinite;-moz-animation:slideInTop 1s infinite;-o-animation:slideInTop 1s infinite;animation:slideInTop 1s infinite;animation-iteration-count:1}.a{background-color:#d0d2d8;border-radius:3px}.b{width:80px;height:5px;margin:10px 0}.c{margin:13px 0}.d{background:-468px 0 no-repeat #d0d2d8;background-image:linear-gradient(to right,#d0d2d8 0,#e1e4ec 20%,#d0d2d8 40%,#d0d2d8 100%);background-size:800px 104px;-webkit-animation-duration:3s;-webkit-animation-fill-mode:forwards;-webkit-animation-iteration-count:infinite;-webkit-animation-name:d;-webkit-animation-timing-function:linear}@keyframes slideInTop{0%{top:-100%}100%{top:0}}@keyframes slideInLeft{0%{left:-100%}100%{left:0}}@-webkit-keyframes d{0%{background-position:-468px 0}100%{background-position:468px 0}}</style>
+</head>
+
+<body>
+	<main class="container" role="main">
+		<header>
+			<div class="lds-ripple"><div></div><div></div></div>
+			<h1>🦉</h1>
+			<p class="subhead">
+				We're getting ready for you.
+			</p>
+			<p class="subhead">
+				<a href="https://jpstaff.myshopify.com/admin/apps/enron">Continue</a>
+			</p>
+		</header>
+	</main>
+	<div class="p h">
+		<div class="a b c d" style="width:100px"></div>
+		<div class="a b c d"></div>
+		<div class="a b c d" style="width:90px"></div>
+		<div class="a b c d" style="width:90px"></div>
+		<div class="a b c d"></div>
+		<div class="a b c d" style="width:90px"></div>
+	</div>
+	<div class="p e">
+		<div class="p f">
+			<div class="p g a d">
+			</div>
+		</div>
+	</div>
+
+	<script>
+		function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, '\\$&');
+		    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+		}
+		const shop = getParameterByName('shop');
+		const appURL = "/admin/apps/enron";
+		const redirectURL = "https://" + shop + appURL;
+
+		const preloadLink = document.createElement("link");
+		preloadLink.href = redirectURL;
+		preloadLink.rel = "prerender";
+		document.head.appendChild(preloadLink);
+
+		window.setTimeout(function(){
+			window.location.href = redirectURL;
+		}, 5000);
+	</script>
+</body>
+</html>
