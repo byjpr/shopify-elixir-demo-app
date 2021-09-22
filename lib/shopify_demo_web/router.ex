@@ -19,6 +19,14 @@ defmodule ShopifyDemoWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/auth", ShopifyDemoWeb do
+    pipe_through([:browser])
+
+    get("/", OauthController, :index)
+    get("/authorise", OauthController, :authorise)
+    get("/callback", OauthController, :callback)
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", ShopifyDemoWeb do
   #   pipe_through :api
