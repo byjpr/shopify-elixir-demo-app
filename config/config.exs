@@ -33,6 +33,12 @@ config :shopify_demo, :shopify_conf,
   redirect_uri: "https://example.com/return", # This should be the same as the one you created in the Partner page
   base_params: "read_products, write_products" # The minimum needed
 
+# Oban jobs conf
+config :shopify_demo, Oban,
+  repo: ShopifyDemo.Repo,
+  plugins: [Oban.Plugins.Pruner],
+  queues: [default: 10]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
