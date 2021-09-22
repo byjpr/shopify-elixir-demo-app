@@ -48,7 +48,10 @@ defmodule ShopifyDemo.MixProject do
 
       # Auth and API
       {:oauth2, "~> 2.0.0"},
-      {:shopify_graphql, "~> 2.0.0-rc.4"}
+      {:shopify_graphql, "~> 2.0.0-rc.4"},
+
+      # Jobs
+      {:oban, "~> 2.7"}
     ]
   end
 
